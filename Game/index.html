@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tak Toe</title>
+    <style>
+      body {
+        background-color: black;
+        color: aqua;
+        font-family: Arial, sans-serif;
+      }
+      .background {
+        position: relative;
+        left: 1020px;
+        border: 2px solid #31e1f7;
+        height: 1000px;
+        width: 1000px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .block {
+        height: 900px;
+        width: 300px;
+        border: 2px solid #31e1f7;
+      }
+      .row {
+        height: 300px;
+        width: 300px;
+        border: 2px solid #31e1f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .row p {
+        font-size: 200px;
+        font-weight: 900;
+        color: #d800a6;
+        background-color: black;
+        box-shadow: 0px 0px 0px black;
+        text-shadow: 4px 4px 8px #960a8d;
+      }
+      h1,
+      p {
+        margin: 10px auto;
+        text-align: center;
+        background-color: #26021e;
+        width: 800px;
+        box-shadow: 3px 3px 8px #31e1f7;
+      }
+      button {
+        position: relative;
+        left: 1020px;
+        height: 70px;
+        width: 120px;
+        border-radius: 4px;
+        color: #31e1f7;
+        background-color: black;
+        box-shadow: 2px 2px 5px #31e1f7;
+        font-size: 20px;
+        font-weight: 900;
+      }
+      button:hover {
+        color: #960a8d;
+        background-color: #31e1f7;
+      }
+      .message {
+        position: relative;
+        bottom: 1010px;
+        left: 1020px;
+        height: 1000px;
+        width: 1000px;
+        font-size: 90px;
+        padding: 10px 10px;
+        z-index: 2;
+        backdrop-filter: blur(10px) brightness(0.8);
+        display: none;
+      }
+      .message p {
+        background-color: black;
+        margin: 300px auto;
+        padding: 7px 7px;
+      }
+      .message button {
+        position: relative;
+        bottom: 300px;
+        left: 440px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <br />
+      <h1 style="font-size: 100px">TIC TAC TOE</h1>
+      <br />
+      <p style="color: #ff7777; font-size: 45px; padding: 8px 8px" id="Note">
+        Player 1 With - O & Player 2 With - X
+      </p>
+      <br /><br />
+      <button onClick="resetGame()">RESET GAME</button>
+      <br /><br /><br />
+      <div class="background">
+        <div class="block">
+          <div class="row1 row" title="1">
+            <p></p>
+          </div>
+          <div class="row2 row" title="2">
+            <p></p>
+          </div>
+          <div class="row3 row" title="3">
+            <p></p>
+          </div>
+        </div>
+        <div class="block">
+          <div class="row4 row" title="4">
+            <p></p>
+          </div>
+          <div class="row5 row" title="5">
+            <p></p>
+          </div>
+          <div class="row6 row" title="6">
+            <p></p>
+          </div>
+        </div>
+        <div class="block">
+          <div class="row7 row" title="7">
+            <p></p>
+          </div>
+          <div class="row8 row" title="8">
+            <p></p>
+          </div>
+          <div class="row9 row" title="9">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="message">
+      <p class="inner">Congratulation! Player ? Win</p>
+      <button onclick="nextGame()">Next Match</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
